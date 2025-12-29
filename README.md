@@ -1,10 +1,10 @@
 <div align="center">
   <h1>📝 Todo Master</h1>
   <p>
-    <strong>თანამედროვე Todo List აპლიკაცია</strong>
+    <strong>Modern Todo List Application</strong>
   </p>
   <p>
-    Next.js-ზე დაფუძნებული, იასამნისფერი გრადიენტებით და smooth ანიმაციებით
+    Built with Next.js, featuring purple gradient design and smooth animations
   </p>
   
   ![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?style=for-the-badge&logo=next.js)
@@ -12,6 +12,10 @@
   ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)
   ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
   ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+  
+  <p>
+    <a href="README.md"><strong>English</strong></a> • <a href="README.ge.md">ქართული</a>
+  </p>
 </div>
 
 <br/>
@@ -23,18 +27,18 @@
 <td>
 
 ### 🎨 Design
-- 💜 **Purple Gradient Theme** - მოდური იასამნისფერი პალიტრა
-- 🎭 **Smooth Animations** - რბილი გადასვლები და ეფექტები
-- 📱 **Responsive Design** - ყველა ეკრანზე სრულყოფილი
-- 🌈 **Modern UI** - თანამედროვე ინტერფეისი
+- 💜 **Purple Gradient Theme** - Trendy purple color palette
+- 🎭 **Smooth Animations** - Fluid transitions and effects
+- 📱 **Responsive Design** - Perfect on all screen sizes
+- 🌈 **Modern UI** - Contemporary interface design
 
 </td>
 <td>
 
 ### 🛠️ Components
-- ⌨️ **Custom Input** - სრულად მორგებული input fields
-- 🔘 **Smart Buttons** - მრავალფუნქციური ღილაკები
-- 🔐 **Password Toggle** - პაროლის ხილვადობა
+- ⌨️ **Custom Input** - Fully customized input fields
+- 🔘 **Smart Buttons** - Multi-functional button components
+- 🔐 **Password Toggle** - Password visibility control
 - ✅ **Form Validation** - Yup + React Hook Form
 
 </td>
@@ -43,19 +47,19 @@
 <td>
 
 ### ⚡ Performance
-- 🚀 **Next.js 16** - უახლესი ვერსია
-- 📦 **Zustand** - მსუბუქი state management
-- 🎯 **TypeScript** - სრული type safety
-- 🔄 **Optimized** - სწრაფი და ეფექტური
+- 🚀 **Next.js 16** - Latest version
+- 📦 **Zustand** - Lightweight state management
+- 🎯 **TypeScript** - Full type safety
+- 🔄 **Optimized** - Fast and efficient
 
 </td>
 <td>
 
 ### 🎯 Developer Experience
-- 📝 **Clean Code** - წაკითხვადი და ორგანიზებული
-- 🎨 **SCSS Variables** - ცენტრალიზებული სტილები
-- 🔧 **Reusable Components** - კომპონენტების ხელახლა გამოყენება
-- 📚 **Well Documented** - კარგი დოკუმენტაცია
+- 📝 **Clean Code** - Readable and organized
+- 🎨 **SCSS Variables** - Centralized styling
+- 🔧 **Reusable Components** - DRY principles
+- 📚 **Well Documented** - Comprehensive documentation
 
 </td>
 </tr>
@@ -63,27 +67,27 @@
 
 ## 🚀 Quick Start
 
-### პირველადი დაყენება
+### Installation
 
 ```bash
-# რეპოზიტორიის კლონირება
+# Clone the repository
 git clone git@github.com:TamarCoder/todo-master.git
 
-# დირექტორიაში შესვლა
+# Navigate to directory
 cd todo-master
 
-# დამოკიდებულებების ინსტალაცია
+# Install dependencies
 npm install
 ```
 
 ### Development
 
 ```bash
-# Development server-ის გაშვება
+# Start development server
 npm run dev
 ```
 
-გახსენით [http://localhost:3000](http://localhost:3000) ბრაუზერში 🎉
+Open [http://localhost:3000](http://localhost:3000) in your browser 🎉
 
 ### Production
 
@@ -95,7 +99,7 @@ npm run build
 npm start
 ```
 
-## 🛠️ ტექნოლოგიები
+## 🛠️ Tech Stack
 
 <details>
 <summary><b>📦 Core Technologies</b></summary>
@@ -132,7 +136,7 @@ npm start
 
 </details>
 
-## 📁 პროექტის სტრუქტურა
+## 📁 Project Structure
 
 ```
 todo-master/
@@ -150,7 +154,7 @@ todo-master/
 │   │       ├── input.type.ts
 │   │       └── Input.module.scss
 │   ├── 📂 styles/
-│   │   └── variables.scss       # 🎨 SCSS ცვლადები
+│   │   └── variables.scss       # 🎨 SCSS variables
 │   ├── globals.scss             # Global styles
 │   ├── layout.tsx               # Root layout
 │   ├── page.tsx                 # Home page
@@ -162,20 +166,20 @@ todo-master/
 └── 📄 README.md
 ```
 
-## 🎨 SCSS ცვლადები
+## 🎨 SCSS Variables
 
-პროექტი იყენებს ცენტრალიზებულ SCSS ცვლადებს სტილების მართვისთვის:
+The project uses centralized SCSS variables for consistent styling:
 
-### ფერები
+### Colors
 ```scss
-// იასამნისფერი პალიტრა
+// Purple Palette
 $purple-light: #e1bee7;
 $purple-medium: #ba68c8;
 $purple-main: #9c27b0;
 $purple-dark: #7b1fa2;
 $purple-darker: #6a1b9a;
 
-// გრადიენტები
+// Gradients
 $gradient-primary: linear-gradient(135deg, $purple-medium 0%, $purple-dark 100%);
 $gradient-hover: linear-gradient(135deg, $purple-dark 0%, $purple-darker 100%);
 ```
@@ -197,11 +201,11 @@ $transition-base: 350ms ease-in-out;
 $transition-slow: 500ms ease-in-out;
 ```
 
-## 🧩 კომპონენტები
+## 🧩 Components
 
 ### 📝 Input Component
 
-მორგებული input component მრავალი ფუნქციით:
+Custom input component with multiple features:
 
 **Features:**
 - ✅ Controlled & Uncontrolled modes
@@ -211,7 +215,7 @@ $transition-slow: 500ms ease-in-out;
 - 🎨 Hover, focus, disabled states
 - 📱 Fully responsive
 
-**გამოყენება:**
+**Usage:**
 ```tsx
 <Input 
   type="text"
@@ -226,7 +230,7 @@ $transition-slow: 500ms ease-in-out;
 
 ### 🔘 Button Component
 
-მრავალფუნქციური ღილაკი component:
+Multi-functional button component:
 
 **Features:**
 - 🎨 Multiple variants: `primary`, `secondary`, `outline`, `ghost`
@@ -236,7 +240,7 @@ $transition-slow: 500ms ease-in-out;
 - 📱 Full width option
 - ✨ Smooth hover & active animations
 
-**გამოყენება:**
+**Usage:**
 ```tsx
 <Button 
   variants="primary"
