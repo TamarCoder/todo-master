@@ -278,7 +278,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  Made with 💜 by Tamar Khuskivadze
+  Made with 💜 by TamarCoder
   <br/>
   <sub>⭐ Star this repo if you like it!</sub>
 </div>
