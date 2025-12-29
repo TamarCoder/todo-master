@@ -1,0 +1,110 @@
+@use "../../styles/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  white-space: nowrap;
+  border: none;
+  border-radius: $radius-md;
+  font-family: inherit;
+  font-weight: $font-medium;
+  cursor: pointer;
+  transition: all $transition-base;
+  user-select: none;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid $purple-main;
+    outline-offset: 2px;
+  }
+}
+
+.primary {
+  background: $gradient-primary;
+  color: $btn-text;
+  border: 1px solid $btn-border;
+  box-shadow: $shadow-purple-sm;
+  transition: all $transition-base;
+
+  &:hover:not(:disabled) {
+    background: $gradient-hover;
+    box-shadow: $shadow-purple-md;
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    background: $btn-bg-active;
+    border-color: $btn-border-active;
+    box-shadow: $shadow-purple-sm;
+    transform: translateY(0);
+    transition: all $transition-slow;
+  }
+
+  &:disabled {
+    background: $btn-bg-disabled;
+    color: $btn-text-disabled;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+.small {
+  padding: $padding-xs $padding-xl;
+  font-size: $font-sm;
+  border-radius: $radius-sm;
+}
+
+.medium {
+  padding: $padding-sm $padding-2xl;
+  font-size: $font-base;
+}
+
+.large {
+  padding: $padding-md 4rem;
+  font-size: $font-lg;
+  border-radius: $radius-lg;
+}
+
+.loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.iconLeft {
+  margin-right: $margin-sm;
+}
+
+.iconRight {
+  margin-left: $margin-sm;
+}

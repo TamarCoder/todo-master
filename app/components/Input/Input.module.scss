@@ -1,0 +1,143 @@
+@use "../../styles/variables" as *;
+
+.inputWrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputItem {
+  display: flex;
+  align-items: center;
+  border-radius: $radius-xl;
+  border: none;
+  position: relative;
+  align-items: center;
+}
+
+.inputField {
+  width: 100%;
+  height: auto;
+  border: 1px solid $gray;
+  border-radius: $radius-md;
+  padding: $padding-sm $padding-xl;
+  font-size: $font-base;
+  color: $black;
+  background-color: $white;
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: $input-border-hover;
+  }
+
+  &:focus {
+    border-color: $input-border-active;
+    box-shadow: $input-shadow-active;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $input-bg-disabled;
+    color: $input-text-disabled;
+    border-color: $input-border-disabled;
+    cursor: not-allowed;
+  }
+
+  &.withLeftIcon {
+    padding-left: 60px;
+  }
+  &.withRightIcon {
+    padding-right: 60px;
+  }
+  &.error {
+    border-color: $red-main;
+  }
+}
+.label {
+  font-size: $font-base;
+  font-weight: 500;
+  height: 30px;
+  color: $purple-main;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.leftSide {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightSide {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $purple-main;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($purple-main, 10%);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: $input-border-disabled;
+  }
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.outline {
+  width: 100%;
+  height: 50px;
+  border: 2px solid $purple-dark;
+  border-radius: 15px;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $purple-main;
+    box-shadow: $input-shadow-active;
+  }
+  &.error {
+    border-color: $red-main;
+  }
+}
+
+.fillInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $text-light;
+  border: none;
+
+  &.error {
+    border: 1px solid red !important;
+  }
+}

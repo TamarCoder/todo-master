@@ -1,0 +1,12 @@
+@use './styles/variables' as *;
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: $off-white;
+  padding: $padding-lg;
+}
+
+ 

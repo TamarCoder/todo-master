@@ -1,0 +1,48 @@
+{
+  "name": "todo-master",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modern Todo List application with Next.js, custom React components, purple gradient design, and smooth animations",
+  "author": "Tamar Khuskivadze",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TamarCoder/todo-master.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "scss",
+    "todo-list",
+    "zustand",
+    "react-hook-form"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "axios": "^1.13.2",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.69.0",
+    "react-icons": "^5.5.0",
+    "sass": "^1.97.1",
+    "yup": "^1.7.1",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "typescript": "^5"
+  }
+}
