@@ -1,0 +1,101 @@
+@use "../../styles/variables" as *;
+
+.task {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(139, 92, 246, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+.checkicon {
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+  border-radius: 50%;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-purple-sm;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  width: 50px;
+  height: 50px;
+  background-color: $white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-purple-sm;
+  cursor: pointer;
+}
+
+.Icon {
+  font-size: 24px;
+  color: #8b5cf6;
+}
+
+.checked {
+  font-size: 24px;
+  color: #8b5cf6;
+}
+
+.unchecked {
+  font-size: 24px;
+  color: #d1d5db;
+}
+
+.content {
+   width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  justify-content: flex-start;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.completedText {
+  text-decoration: line-through;
+  color: #a855f7;
+  font-size: $font-base;
+  font-weight: $font-regular;
+  margin-left: $margin-md;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0.7;
+}

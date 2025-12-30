@@ -1,4 +1,5 @@
-'use client';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "./Input.module.scss";
 import { InputProps } from "./input.type";
@@ -9,6 +10,7 @@ export function Input({
   type = "text",
   placeholder = "",
   onChange,
+  onKeyDown,
   error,
   disabled = false,
   label = "",
@@ -19,6 +21,8 @@ export function Input({
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const inputType = type === "password" && showPassword ? "text" : type;
   const isPasswordFileld = type === "password";
+
+  const [inputValue, setInputValue] = useState("");
 
   const hasLeftIcon = icon && iconPosition === "left";
   const hasRightIcon = (icon && iconPosition === "right") || isPasswordFileld;
@@ -34,9 +38,14 @@ export function Input({
   };
 
   // Input props for controlled vs uncontrolled
-  const inputProps = onChange 
-    ? { value: value || "", onChange }
-    : {};
+  const inputProps = onChange ? { value: value || "", onChange } : {};
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+    if (onChange) {
+      onChange(e);
+    }
+  };
 
   return (
     <div className={styles.inputWrapper}>
@@ -50,8 +59,11 @@ export function Input({
           type={inputType}
           className={inputFieldClasses}
           {...inputProps}
+         
           placeholder={placeholder}
           disabled={disabled}
+          onKeyDown={onKeyDown}
+          onChange={handleChange}
         />
 
         {icon && iconPosition === "right" && (
